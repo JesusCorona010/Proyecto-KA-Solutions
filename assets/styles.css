@@ -7,7 +7,7 @@
     --text-light: #ffffff; /* Texto blanco puro para contraste */
     --accent-blue: #00FFFF; /* Azul cian brillante para acentos */
     --accent-light-blue: #66FFFF; /* Un azul más claro para hover o detalles */
-    --border-color: #333333; /* Color de borde sutil */
+    --border-color: #ffffff; /* Color de borde sutil */
 }
 
 /* Reset Básico */
