@@ -272,12 +272,14 @@ body {
     }
 }
 
-.cta-button {
+button.cta-button,
+a.cta-button {
     border: 2px solid #fff;
+    display: inline-block;
     background: transparent;
-    color: #fff;
+    color: #ffffff;
     padding: 15px 30px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -287,14 +289,17 @@ body {
     opacity: 0;
     animation: titleFadeIn 1s ease forwards;
     animation-delay: 4s;
+    text-decoration: none;
 }
 
-.cta-button:hover {
+button.cta-button:hover,
+a.cta-button:hover {
     background: #00d4ff;
     border-color: #00d4ff;
     color: #000;
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+    text-decoration: none;
 }
 
 /* Second Section */
