@@ -147,8 +147,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeResponsiveMenu();
     
     // Mensaje de bienvenida en la consola
-    console.log('🚀 Montserrat Website cargado correctamente');
-    console.log('💻 Desarrollado con amor y café');
+    console.log('Montserrat Website cargado correctamente');
+    console.log('Desarrolladndo ideas');
 });
 
 // Función para optimizar el rendimiento
