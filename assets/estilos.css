@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     background: #000;
     color: #fff;
     overflow-x: hidden;
@@ -29,11 +29,40 @@ body {
     align-items: center;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: 700;
+/* Logo del Header
+.logo-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+} */
+
+.logo-icon {
+    display: flex;
+    align-items: center;
 }
 
+.header-logo-svg {
+    width: 40px;
+    height: 25px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.logo-text-header {
+    font-size: 24px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.logo-header:hover .header-logo-svg {
+    color: #00d4ff;
+}
+
+.logo-header:hover .logo-text-header {
+    color: #00d4ff;
+}
+
+/* Navegación */
 .nav-menu {
     display: flex;
     list-style: none;
@@ -70,11 +99,11 @@ body {
     position: relative;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #000;
     overflow: hidden;
+    padding: 0 50px;
 }
 
 .particles-container {
@@ -113,21 +142,134 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+}
+
+.hero-text-content {
+    text-align: left;
+}
+
+/* Logo principal del Hero */
+.hero-logo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jr-text {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    opacity: 0.8;
+}
+
+.hero-logo-svg {
+    width: 250px;
+    height: 150px;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
+}
+
+/* Animaciones del logo */
+.circuit-path {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: drawPath 4s ease-in-out forwards;
+}
+
+.circuit-path:nth-child(2) { animation-delay: 0.1s; }
+.circuit-path:nth-child(3) { animation-delay: 0.2s; }
+.circuit-path:nth-child(4) { animation-delay: 0.3s; }
+.circuit-path:nth-child(5) { animation-delay: 0.4s; }
+.circuit-path:nth-child(6) { animation-delay: 0.5s; }
+.circuit-path:nth-child(7) { animation-delay: 0.6s; }
+.circuit-path:nth-child(8) { animation-delay: 0.7s; }
+.circuit-path:nth-child(9) { animation-delay: 0.8s; }
+.circuit-path:nth-child(10) { animation-delay: 0.9s; }
+
+@keyframes drawPath {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.circuit-dot {
+    opacity: 0;
+    animation: fadeInDot 0.3s ease forwards;
+}
+
+.circuit-dot:nth-child(n+20) { animation-delay: 2s; }
+.circuit-dot:nth-child(n+25) { animation-delay: 2.2s; }
+.circuit-dot:nth-child(n+30) { animation-delay: 2.4s; }
+
+@keyframes fadeInDot {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hover effects para el logo del hero */
+.hero-logo-container:hover .circuit-path {
+    stroke: #00d4ff;
+    filter: drop-shadow(0 0 8px #00d4ff);
+    transition: all 0.3s ease;
+}
+
+.hero-logo-container:hover .circuit-dot {
+    fill: #00d4ff;
+    filter: drop-shadow(0 0 6px #00d4ff);
+    transition: all 0.3s ease;
+}
+
+.hero-logo-container:hover .jr-text {
+    color: #00d4ff;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    transition: all 0.3s ease;
 }
 
 .hero h1 {
-    font-size: 80px;
+    font-size: 60px;
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1;
+    background: linear-gradient(45deg, #fff, #00d4ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: titleFadeIn 1s ease forwards;
+    animation-delay: 3s;
+    opacity: 0;
 }
 
 .hero h2 {
-    font-size: 70px;
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 400;
     margin-bottom: 50px;
     line-height: 1;
+    opacity: 0;
+    animation: titleFadeIn 1s ease forwards;
+    animation-delay: 3.5s;
+}
+
+@keyframes titleFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 }
 
 .cta-button {
@@ -142,6 +284,9 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
+    opacity: 0;
+    animation: titleFadeIn 1s ease forwards;
+    animation-delay: 4s;
 }
 
 .cta-button:hover {
@@ -195,6 +340,7 @@ body {
 .indicator.active {
     background: #00d4ff;
     border-color: #00d4ff;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
 }
 
 .section-text h3 {
@@ -206,9 +352,10 @@ body {
 
 .section-text h4 {
     font-size: 80px;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 40px;
     line-height: 1;
+    color: #00d4ff;
 }
 
 .section-button {
@@ -230,6 +377,8 @@ body {
     background: #00d4ff;
     border-color: #00d4ff;
     color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
 }
 
 .right-content {
@@ -240,6 +389,7 @@ body {
     min-height: 400px;
     display: flex;
     flex-direction: column;
+    border: 1px solid #333;
 }
 
 .terminal-header {
@@ -315,10 +465,53 @@ body {
     
     .nav-menu {
         gap: 20px;
+        font-size: 12px;
     }
     
-    .hero h1, .hero h2 {
-        font-size: 60px;
+    .logo-text-header {
+        font-size: 18px;
+    }
+    
+    .header-logo-svg {
+        width: 30px;
+        height: 20px;
+    }
+    
+    .hero {
+        padding: 0 25px;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-text-content {
+        text-align: center;
+        order: 2;
+    }
+    
+    .hero-logo-container {
+        order: 1;
+    }
+    
+    .hero-logo-svg {
+        width: 200px;
+        height: 120px;
+    }
+    
+    .jr-text {
+        font-size: 16px;
+        left: -35px;
+    }
+    
+    .hero h1 {
+        font-size: 50px;
+    }
+    
+    .hero h2 {
+        font-size: 35px;
     }
     
     .section-content {
@@ -332,5 +525,33 @@ body {
     
     .second-section {
         padding: 50px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        display: none; /* Aquí podrías implementar un menú hamburguesa */
+    }
+    
+    .hero-content {
+        gap: 30px;
+    }
+    
+    .hero-logo-svg {
+        width: 180px;
+        height: 100px;
+    }
+    
+    .hero h1 {
+        font-size: 40px;
+    }
+    
+    .hero h2 {
+        font-size: 28px;
+    }
+    
+    .jr-text {
+        font-size: 14px;
+        left: -30px;
     }
 }

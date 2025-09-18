@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Montserrat - Desarrollo Web</title>
+    <title>KA Solutions - Web Development</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/estilos.css">
 </head>
@@ -11,12 +11,16 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav">
-            <div class="logo">Desarrollo Web</div>
-            <ul class="nav-menu">
-                <li>DHOIR</li>
-                <li>AME</li>
-                <li>NOMG</li>
-                <li class="cta">HON RETS</li>
+            <div class="logo-header">
+                <div class="logo-icon"></div>
+                <span class="logo-text-header">KA Solutions</span>
+            </div>
+            <ul class="nav-menu">   
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Services</li>
+                <li>Team</li>
+                <li class="cta">Contact Us</li>
             </ul>
         </nav>
     </header>
@@ -25,9 +29,106 @@
     <section class="hero">
         <div class="particles-container" id="particles"></div>
         <div class="hero-content">
-            <h1>KA Solutions</h1>
-            <h2>Creando soluciones digitales</h2>
-            <button class="cta-button">COM NORS</button>
+            <!-- Contenido de texto a la izquierda -->
+            <div class="hero-text-content">
+                <h1>KA Solutions</h1>
+                <h2>Making Digital Solutions</h2>
+                <button class="cta-button">Get Started</button>
+            </div>
+            
+            <!-- Logo a la derecha -->
+            <div class="hero-logo-container">
+                <div class="jr-text">JR</div>
+                
+                <svg class="hero-logo-svg" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Letra K formada por circuitos -->
+                    <g stroke="white" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <!-- Línea vertical principal de K -->
+                        <path class="circuit-path" d="M 80 40 L 80 200"/>
+                        
+                        <!-- Diagonal superior de K con circuitos -->
+                        <path class="circuit-path" d="M 80 120 L 100 100 L 130 70 L 160 40"/>
+                        <path class="circuit-path" d="M 110 110 L 140 80"/>
+                        <path class="circuit-path" d="M 120 100 L 150 70"/>
+                        
+                        <!-- Diagonal inferior de K con circuitos -->
+                        <path class="circuit-path" d="M 80 120 L 100 140 L 130 170 L 160 200"/>
+                        <path class="circuit-path" d="M 110 130 L 140 160"/>
+                        <path class="circuit-path" d="M 120 140 L 150 170"/>
+                        
+                        <!-- Conexiones laterales izquierdas -->
+                        <path class="circuit-path" d="M 50 80 L 80 80"/>
+                        <path class="circuit-path" d="M 50 160 L 80 160"/>
+                        <path class="circuit-path" d="M 40 100 L 60 100 L 80 100"/>
+                    </g>
+
+                    <!-- Letra A formada por circuitos -->
+                    <g stroke="white" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <!-- Línea izquierda de A con circuitos -->
+                        <path class="circuit-path" d="M 200 200 L 220 160 L 240 120 L 260 80 L 280 40"/>
+                        <path class="circuit-path" d="M 210 180 L 230 140 L 250 100 L 270 60"/>
+                        
+                        <!-- Línea derecha de A con circuitos -->
+                        <path class="circuit-path" d="M 280 40 L 300 80 L 320 120 L 340 160 L 360 200"/>
+                        <path class="circuit-path" d="M 290 60 L 310 100 L 330 140 L 350 180"/>
+                        
+                        <!-- Línea horizontal de A -->
+                        <path class="circuit-path" d="M 230 140 L 250 140 L 280 140 L 310 140 L 330 140"/>
+                        <path class="circuit-path" d="M 240 130 L 320 130"/>
+                        
+                        <!-- Conexiones laterales derechas -->
+                        <path class="circuit-path" d="M 360 80 L 380 80"/>
+                        <path class="circuit-path" d="M 360 160 L 380 160"/>
+                        <path class="circuit-path" d="M 340 100 L 360 100 L 380 100"/>
+                    </g>
+
+                    <!-- Puntos de conexión (nodos) -->
+                    <g fill="white">
+                        <!-- Nodos de K -->
+                        <circle class="circuit-dot" cx="80" cy="80" r="5"/>
+                        <circle class="circuit-dot" cx="80" cy="120" r="6"/>
+                        <circle class="circuit-dot" cx="80" cy="160" r="5"/>
+                        <circle class="circuit-dot" cx="100" cy="100" r="4"/>
+                        <circle class="circuit-dot" cx="100" cy="140" r="4"/>
+                        <circle class="circuit-dot" cx="130" cy="70" r="4"/>
+                        <circle class="circuit-dot" cx="130" cy="170" r="4"/>
+                        <circle class="circuit-dot" cx="160" cy="40" r="5"/>
+                        <circle class="circuit-dot" cx="160" cy="200" r="5"/>
+                        
+                        <!-- Nodos de A -->
+                        <circle class="circuit-dot" cx="280" cy="40" r="6"/>
+                        <circle class="circuit-dot" cx="240" cy="120" r="4"/>
+                        <circle class="circuit-dot" cx="320" cy="120" r="4"/>
+                        <circle class="circuit-dot" cx="280" cy="140" r="5"/>
+                        <circle class="circuit-dot" cx="200" cy="200" r="5"/>
+                        <circle class="circuit-dot" cx="360" cy="200" r="5"/>
+                        <circle class="circuit-dot" cx="230" cy="140" r="4"/>
+                        <circle class="circuit-dot" cx="330" cy="140" r="4"/>
+                        
+                        <!-- Nodos en conexiones laterales -->
+                        <circle class="circuit-dot" cx="50" cy="80" r="3"/>
+                        <circle class="circuit-dot" cx="50" cy="160" r="3"/>
+                        <circle class="circuit-dot" cx="40" cy="100" r="3"/>
+                        <circle class="circuit-dot" cx="380" cy="80" r="3"/>
+                        <circle class="circuit-dot" cx="380" cy="160" r="3"/>
+                        <circle class="circuit-dot" cx="380" cy="100" r="3"/>
+                    </g>
+
+                    <!-- Elementos decorativos tipo circuito -->
+                    <g stroke="white" stroke-width="3" fill="none" opacity="0.7">
+                        <!-- Mini rectángulos como chips -->
+                        <rect class="circuit-path" x="60" y="95" width="15" height="10" rx="2"/>
+                        <rect class="circuit-path" x="340" y="95" width="15" height="10" rx="2"/>
+                        <rect class="circuit-path" x="270" y="30" width="20" height="8" rx="2"/>
+                        
+                        <!-- Líneas conectoras adicionales -->
+                        <path class="circuit-path" d="M 25 60 L 35 60 L 40 65 L 40 75"/>
+                        <path class="circuit-path" d="M 25 180 L 35 180 L 40 175 L 40 165"/>
+                        <path class="circuit-path" d="M 395 60 L 385 60 L 380 65 L 380 75"/>
+                        <path class="circuit-path" d="M 395 180 L 385 180 L 380 175 L 380 165"/>
+                    </g>
+                </svg>
+            </div>
         </div>
     </section>
 
@@ -41,9 +142,9 @@
                     <div class="indicator"></div>
                 </div>
                 <div class="section-text">
-                    <h3>Montserrat</h3>
-                    <h4>text</h4>
-                    <button class="section-button">COM NORS</button>
+                    <h3>Web Development</h3>
+                    <h4>Solutions</h4>
+                    <button class="section-button">Learn More</button>
                 </div>
             </div>
             <div class="right-content">
@@ -54,18 +155,18 @@
                 </div>
                 <div class="terminal-content">
                     <div class="code-line">
-                        <span class="syntax-comment">// Desarrollando soluciones innovadoras</span>
+                        <span class="syntax-comment">// Building innovative digital solutions</span>
                     </div>
                     <div class="code-line">
-                        <span class="syntax-keyword">function</span> <span class="syntax-function">crearExperiencia</span>() {
+                        <span class="syntax-keyword">function</span> <span class="syntax-function">createExperience</span>() {
                     </div>
                     <div class="code-line">
-                        &nbsp;&nbsp;<span class="syntax-keyword">return</span> <span class="syntax-string">"Código que transforma ideas"</span>;
+                        &nbsp;&nbsp;<span class="syntax-keyword">return</span> <span class="syntax-string">"Code that transforms ideas into reality"</span>;
                     </div>
                     <div class="code-line">};</div>
                     <div style="position: absolute; bottom: 20px; right: 20px; font-size: 12px;">
-                        <span style="color: #00d4ff;">Montserrat</span><br>
-                        <span style="color: #666;">text</span>
+                        <span style="color: #00d4ff;">KA Solutions</span><br>
+                        <span style="color: #666;">Web Development</span>
                     </div>
                 </div>
             </div>
