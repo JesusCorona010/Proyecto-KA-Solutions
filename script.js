@@ -171,3 +171,36 @@ function optimizePerformance() {
 
 // Llamar optimización
 optimizePerformance();
+
+const trabajos = [
+  {
+    titulo: "Diseño de Logo",
+    descripcion: "Un logo minimalista para una marca de ropa.",
+    imagen: "https://via.placeholder.com/300x200.png?text=Logo",
+  },
+  {
+    titulo: "Sitio Web",
+    descripcion: "Página web responsive para un restaurante.",
+    imagen: "https://via.placeholder.com/300x200.png?text=Web",
+  },
+  {
+    titulo: "Aplicación Móvil",
+    descripcion: "App de pedidos de comida en Flutter.",
+    imagen: "https://via.placeholder.com/300x200.png?text=App",
+  },
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+  const galeria = document.getElementById("galeria");
+
+  trabajos.forEach((trabajo) => {
+    const div = document.createElement("div"); // crea un <div>
+    div.className = "item"; // se le asigna la clase item para los estilos
+    div.innerHTML = `
+            <img src="${trabajo.imagen}" alt="${trabajo.titulo}">
+            <h3>${trabajo.titulo}</h3>
+            <p>${trabajo.descripcion}</p>
+        `;
+    galeria.appendChild(div);
+  });
+});
