@@ -261,6 +261,26 @@ body {
     animation-delay: 3.5s;
 }
 
+.hero h3 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    line-height: 1;
+    opacity: 0;
+    animation: titleFadeIn 1s ease forwards;
+    animation-delay: 3.5s;
+}
+
+.hero p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    line-height: 1;
+    opacity: 0;
+    animation: titleFadeIn 1s ease forwards;
+    animation-delay: 3.5s;
+}
+
 @keyframes titleFadeIn {
     to {
         opacity: 1;
