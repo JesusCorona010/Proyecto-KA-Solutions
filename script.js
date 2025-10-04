@@ -217,3 +217,32 @@ document.addEventListener("DOMContentLoaded", () => {
     galeria.appendChild(div);
   });
 });
+
+
+
+// SECCION DE CONTACTO POR WHATSAAP
+// Funcionalidad del botón Get In Touch para WhatsApp
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Seleccionar el botón de Contact Us
+    const contactButton = document.querySelector('#contact .cta-button');
+    
+    if (contactButton) {
+        contactButton.addEventListener('click', function() {
+            // Número de WhatsApp de KA Solutions
+            const phoneNumber = '5212228148472'; // +52 222 814 8472
+            
+            // Mensaje predefinido (opcional)
+            const message = 'Hola KA Solutions, estoy interesado en sus servicios de desarrollo web';
+            
+            // Codificar el mensaje para URL
+            const encodedMessage = encodeURIComponent(message);
+            
+            // Crear URL de WhatsApp
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            
+            // Abrir WhatsApp en nueva pestaña
+            window.open(whatsappURL, '_blank');
+        });
+    }
+});
