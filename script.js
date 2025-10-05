@@ -246,3 +246,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const textElement = document.getElementById("typing-text");
+    const text = textElement.innerHTML; 
+    textElement.innerHTML = ""; 
+
+    let i = 0;
+    const speed = 15; // menor = más rápido
+
+    function typeEffect() {
+        if (i < text.length) {
+            if (text.substring(i, i + 4) === "<br>") {
+                textElement.innerHTML += "<br>";
+                i += 4;
+            } else {
+                textElement.innerHTML += text.charAt(i);
+                i++;
+            }
+            setTimeout(typeEffect, speed);
+        } else {
+            textElement.style.borderRight = "none";
+        }
+    }
+
+    typeEffect();
+});
