@@ -69,6 +69,42 @@ body {
     gap: 40px;
 }
 
+
+.project_actions{
+    display: flex;
+    gap: 1rem;
+}
+
+
+.btn_menu{
+    color: #fff;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.BTN{
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid #fff;
+}
+
+.BTN:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #000000;
+    background-color: #00FFFF;
+    border-color: #00FFFF;
+}
 .nav-menu li {
     font-size: 14px;
     font-weight: 400;
@@ -1346,9 +1382,8 @@ h1 {
     .project-title {
         font-size: 20px;
     }
+
 }
-
-
 
 #typing-text {
     border-right: 1px solid #00d4ff;
@@ -1365,4 +1400,3 @@ h1 {
     from, to { border-color: transparent; }
     50% { border-color: #00d4ff; }
 }
-
